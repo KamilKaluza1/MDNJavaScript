@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <style>
+      p {
+        font-size: 100px;
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    const para = document.createElement('p');
+
+
+    function random(x=0, y){
+        return  Math.floor(Math.random() * (y - x) + x);
+    }
+    
+    function chooseName(names){
+        let num = random(0, names.length)
+        return names[num]
+    }
+
+    para.textContent = chooseName(names)   
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>
