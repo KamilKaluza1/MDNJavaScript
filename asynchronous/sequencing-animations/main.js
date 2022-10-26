@@ -19,33 +19,27 @@ const aliceTumbling = [
 
 // first way:
 
-const animateFinishedPromise1 = alice1.animate(aliceTumbling, aliceTiming).finished
-
-animateFinishedPromise1.then(() => {
-  const animateFinishedPromise2 = alice2.animate(aliceTumbling, aliceTiming).finished
-  animateFinishedPromise2.then(() => {
-    const animateFinishedPromise3 = alice3.animate(aliceTumbling, aliceTiming).finished
-  })
-});
 
 
-// second way:
+// alice1.animate(aliceTumbling, aliceTiming).finished.then(()=>{
+//   alice2.animate(aliceTumbling, aliceTiming).finished.then(()=>{
+//     alice3.animate(aliceTumbling, aliceTiming);
+//   });
+// });
 
-const animateFinishedPromise = alice1.animate(aliceTumbling, aliceTiming).finished
+// // second way:
 
-animateFinishedPromise
-  .then(() => alice2.animate(aliceTumbling, aliceTiming).finished)
-  .then(() => alice3.animate(aliceTumbling, aliceTiming));
+// alice1.animate(aliceTumbling, aliceTiming).finished
+// .then(()=>alice2.animate(aliceTumbling, aliceTiming).finished)
+// .then(()=> alice3.animate(aliceTumbling,aliceTiming))
 
 
-// third way:
+// // third way:
 
-async function animateAllAlices(){
-  await alice1.animate(aliceTumbling, aliceTiming).finished;
-  await alice2.animate(aliceTumbling, aliceTiming).finished;
-  alice3.animate(aliceTumbling, aliceTiming).finished;
+async function rool() {
+  await alice1.animate(aliceTumbling,aliceTiming).finished
+  await alice2.animate(aliceTumbling,aliceTiming).finished
+  alice3.animate(aliceTumbling,aliceTiming)
 }
 
-animateAllAlices();
-
-
+rool()
