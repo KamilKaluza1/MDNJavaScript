@@ -28,13 +28,18 @@ const ctx = canvas.getContext('2d');
 // ctx.lineTo(200,106);
 // ctx.fill()
 
-ctx.strokeStyle = "black";
-ctx.lineWidth = 1;
-ctx.font = "36px arial";
-ctx.strokeText("Canvas text", 50, 50);
+// ---------------text---------
 
-ctx.fillStyle = "red";
-ctx.font = "48px georgia";
-ctx.fillText("inny text", 50, 150);
+// ctx.strokeStyle = "black";
+// ctx.lineWidth = 1;
+// ctx.font = "36px arial";
+// ctx.strokeText("Canvas text", 50, 50);
 
-canvas.setAttribute("aria-label", "inny text")
+// ctx.fillStyle = "red";
+// ctx.font = "48px georgia";
+// ctx.fillText("inny text", 50, 150);
+
+// canvas.setAttribute("aria-label", "inny text")
+
+// --------------image-------------------
+
