@@ -43,3 +43,11 @@ const ctx = canvas.getContext('2d');
 
 // --------------image-------------------
 
+// const image = new Image();
+// image.src = "firefox.png";
+// image.addEventListener("load", () => ctx.drawImage(image, 20, 20, 185, 175));
+
+// --------------------animations--------------
+
+
+
