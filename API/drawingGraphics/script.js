@@ -105,8 +105,9 @@ function draw(){
 
     if (posX > width / 2) {
         let newStartPos = -(width / 2 + 102);
-        posX = Match.celi(newStartPos);
+        posX = Math.ceil(newStartPos);
         console.log(posX);
+        
     } else {
         posX += 2;
     }
