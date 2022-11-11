@@ -23,13 +23,13 @@ forgetBtn.addEventListener("click", () => {
 function nameDisplayCheck() {
     if (localStorage.getItem("name")){
         const name = localStorage.getItem("name");
-        h1.textContent = `Wellcome ${name}`;
-        personalGreeting.textContent = `Wellcome to our website, ${name}! We hope you have fun while you are here.`;
+        h1.textContent = `Welcome ${name}`;
+        personalGreeting.textContent = `Welcome to our website, ${name}! We hope you have fun while you are here.`;
         forgetDiv.style.display = "block";
         rememberDiv.style.display = "none";
     } else {
-        h1.textContent = "Wellcome to our website ";
-        personalGreeting.textContent = "Wellcom to our website. We hope you have fun while you are here.";
+        h1.textContent = "Welcome to our website ";
+        personalGreeting.textContent = "Welcome to our website. We hope you have fun while you are here.";
         forgetDiv.style.display = "none";
         rememberDiv.style.display = "block"
     }
