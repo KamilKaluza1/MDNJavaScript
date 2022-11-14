@@ -1,3 +1,5 @@
+// ------------------callback ---------------------------------
+
 const getUserData = (callback) =>{
     setTimeout(() => {
         console.log('1. get user data')
