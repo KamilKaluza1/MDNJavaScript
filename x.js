@@ -12,19 +12,26 @@ const validateData = (callback) => {
     }, 900)
 }
 
-const registerUser = () => {
+const registerUser = (callback) => {
     setTimeout(() => {
         console.log('3. register')
+        callback()
     }, 400)
 }
 
-const sendEmail = () => {
+const sendEmail = (callback) => {
     setTimeout(() =>{
         console.log('4. send email')
+        callback(console.log("ok"))
     }, 200 )
 }
 
-getUserData()
-validateData()
-registerUser()
-sendEmail()
+getUserData(() => {
+    validateData(() => {
+        registerUser(() =>{
+            sendEmail(() => {
+                console.log("end")
+            })
+        })
+    } )
+})
