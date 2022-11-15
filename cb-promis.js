@@ -87,6 +87,7 @@ const sendEmail = () => {
 //         console.log("end")
 //     })
 
+// ------------------async await ---------------------------------
 async function saf(){
     await getUserData()
     await validateData()
