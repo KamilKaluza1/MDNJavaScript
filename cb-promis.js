@@ -79,10 +79,20 @@ const sendEmail = () => {
     })
 }
 
-getUserData()
-    .then(validateData)
-    .then(registerUser)
-    .then(sendEmail)
-    .then(() => {
-        console.log("end")
-    })
+// getUserData()
+//     .then(validateData)
+//     .then(registerUser)
+//     .then(sendEmail)
+//     .then(() => {
+//         console.log("end")
+//     })
+
+async function saf(){
+    await getUserData()
+    await validateData()
+    await registerUser()
+    await sendEmail()
+    console.log("end")
+}
+
+saf()
