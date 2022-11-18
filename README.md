@@ -1,1 +1,1 @@
-# MDNJavaScript - I just follow guides MDN
+# MDNJavaScript - I just follow the MDN guides
