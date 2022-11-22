@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Basic input types</title>
+    <style>
+      html, input {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      div {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      label, input, button {
+        font-size: 14px;
+        line-height: 1.5
+      }
+
+      label {
+        text-align: right;
+        width: 30%;
+        margin-right: 2%;
+      }
+
+      input {
+        flex: auto;
+      }
+
+      button {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+    </style>
+   </head>
+  <body>
+    <form>
+      <div>
+        <label for="text">text input type: </label>
+        <input type="text" id="text" name="text">
+      </div>
+      <div>
+        <!-- obscuring the input by dots  -->
+        <label for="pwd">password input type: </label>
+        <input type="password" id="pwd" name="pwd">
+      </div>
+      <div>
+                <!-- check wether email is valid -->
+        <label for="email">email input type: </label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <!-- check wether url is valid -->
+        <label for="url">url input type: </label>
+        <input type="url" id="url" name="url">
+      </div>
+      <div>
+        <!-- on phones you will see number k-board  -->
+        <label for="number">number input type: </label>
+        <input type="number" id="number" name="number">
+      </div>
+      <div>
+        <!-- wyświetla klawiature numeryczną  -->
+        <label for="tel">tel input type: </label>
+        <input type="tel" id="tel" name="tel">
+      </div>
+      <div>
+        <!-- wyswietla x można skasować input -->
+        <label for="search">search input type: </label>
+        <input type="search" id="search" name="search">
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+
+
+    <form action=""></form>
+    <fieldset>
+      <legend>Choose a maximum house price</legend>
+    <!-- add range to input you have a sówak -> slider i suppose -->
+    <input
+      type="range"
+      name="price"
+      id="price"
+      min="0"
+      max="500000"
+      step="100"
+      value="250000" />
+    <output class="price-output" for="price"></output>
+    <button>Submit</button>
+    </fieldset>
+    </form>
+
+
+    <form action="">
+      <fieldset>
+        <legend>data and time </legend>
+        <input type="datetime-local" name="datetime" id="datetime" > Full data 
+        <br>
+        <input type="month" name="month" id="month"> Month ang year
+        <br>
+        <input type="week" name="week" id="week"> Show week of year
+        <br>
+
+      </fieldset>
+<br>
+
+    <form action="">
+      <fieldset>
+        <legend>When are you available this summer? </legend>
+        <input
+        type="date"
+        name="myDate"
+        min="2023-06-03"
+        max="2023-08-31"
+        step="7"
+        id="myDate" />
+        
+      </fieldset>
+      
+<br>
+    <form action="">
+      <fieldset>
+        <legend>Pick the color  </legend>
+        <input type="color" name="color" id="color">
+        
+      </fieldset>
+
+    </form>
+    <script>
+      const price = document.querySelector("#price");
+      const output = document.querySelector(".price-output");
+
+      output.textContent = price.value;
+
+      price.addEventListener("input", () => {
+        output.textContent = price.value;
+      });
+    </script>
+</body>
+  </html>
